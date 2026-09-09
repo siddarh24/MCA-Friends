@@ -45,7 +45,7 @@
         <ul class="nav-links">
 
             <li>
-                <a href="friendsHOME.html">
+                <a href="index.html">
                     Home
                 </a>
             </li>
@@ -60,35 +60,35 @@
 
                 <div class="dropdown-content">
 
-                    <a href="Hyderabad.html">
-                        🎓 College
-                    </a>
+    <a href="#" onclick="showLocation('college'); return false;">
+        🎓 College
+    </a>
 
-                    <a href="kanchi.html">
-                        🛕 Kanchipuram
-                    </a>
+    <a href="#" onclick="showLocation('kanchi'); return false;">
+        🛕 Kanchipuram
+    </a>
 
-                    <a href="trip.html">
-                        🌊 River Trip
-                    </a>
+    <a href="#" onclick="showLocation('river'); return false;">
+        🌊 River Trip
+    </a>
 
-                    <a href="tpty.html">
-                        🙏 Tirumala
-                    </a>
+    <a href="#" onclick="showLocation('tirumala'); return false;">
+        🙏 Tirumala
+    </a>
 
-                    <a href="siv.html">
-                        🛕 Shivalayam
-                    </a>
+    <a href="#" onclick="showLocation('shivalayam'); return false;">
+        🛕 Shivalayam
+    </a>
 
-                    <a href="both.html">
-                        ❤️ Our Photos
-                    </a>
+    <a href="#" onclick="showLocation('ours'); return false;">
+        ❤️ Our Photos
+    </a>
 
-                    <a href="bgl.html">
-                        🌆 Bangalore
-                    </a>
+    <a href="#" onclick="showLocation('bangalore'); return false;">
+        🌆 Bangalore
+    </a>
 
-                </div>
+</div>
 
             </li>
 
@@ -409,39 +409,6 @@
     </section>
 
 
-
-    <!-- ================= QUOTE ================= -->
-
-    <section class="quote-section">
-
-
-        <div class="big-quote">
-
-            ❝
-
-        </div>
-
-
-        <h2>
-
-            Some people make your life better
-
-            simply by being part of it.
-
-        </h2>
-
-
-        <p>
-
-            — Our Friendship Story ❤️
-
-        </p>
-
-
-    </section>
-
-
-
     <!-- ================= LOCATIONS ================= -->
 
     <section class="locations"
@@ -476,178 +443,185 @@
 
 
         </div>
+    <!-- </section> -->
 
 
+        
+<div class="location-grid">
 
-        <div class="location-grid">
+    <!-- College -->
 
+    <div class="location-card"
+         onclick="showLocation('college')">
 
+        <div class="location-icon">
+            🎓
+        </div>
 
-            <a href="Hyderabad.html"
-                class="location-card">
+        <h3>College</h3>
 
+        <p>
+            Where everything started ❤️
+        </p>
 
-                <div class="location-icon">
-                    🎓
-                </div>
+    </div>
 
 
-                <h3>
-                    College
-                </h3>
+    <!-- Kanchipuram -->
 
+    <div class="location-card"
+         onclick="showLocation('kanchi')">
 
-                <p>
-                    Where everything started ❤️
-                </p>
+        <div class="location-icon">
+            🛕
+        </div>
 
+        <h3>Kanchipuram</h3>
 
-            </a>
+        <p>
+            Beautiful spiritual memories
+        </p>
 
+    </div>
 
 
-            <a href="kanchi.html"
-                class="location-card">
+    <!-- River Trip -->
 
+    <div class="location-card"
+         onclick="showLocation('river')">
 
-                <div class="location-icon">
-                    🛕
-                </div>
+        <div class="location-icon">
+            🌊
+        </div>
 
+        <h3>River Trip</h3>
 
-                <h3>
-                    Kanchipuram
-                </h3>
+        <p>
+            Adventure and fun together
+        </p>
 
+    </div>
 
-                <p>
-                    Beautiful spiritual memories
-                </p>
 
+    <!-- Tirumala -->
 
-            </a>
+    <div class="location-card"
+         onclick="showLocation('tirumala')">
 
+        <div class="location-icon">
+            🙏
+        </div>
 
+        <h3>Tirumala</h3>
 
-            <a href="trip.html"
-                class="location-card">
+        <p>
+            Blessed memories
+        </p>
 
+    </div>
 
-                <div class="location-icon">
-                    🌊
-                </div>
 
+    <!-- Shivalayam -->
 
-                <h3>
-                    River Trip
-                </h3>
+    <div class="location-card"
+         onclick="showLocation('shivalayam')">
 
+        <div class="location-icon">
+            🕉️
+        </div>
 
-                <p>
-                    Adventure and fun together
-                </p>
+        <h3>Shivalayam</h3>
 
+        <p>
+            Peaceful moments
+        </p>
 
-            </a>
+    </div>
 
 
+    <!-- Our Photos -->
 
-            <a href="tpty.html"
-                class="location-card">
+    <div class="location-card special-card"
+         onclick="showLocation('ours')">
 
+        <div class="location-icon">
+            ❤️
+        </div>
 
-                <div class="location-icon">
-                    🙏
-                </div>
+        <h3>Our Photos</h3>
 
+        <p>
+            The best of us together
+        </p>
 
-                <h3>
-                    Tirumala
-                </h3>
+    </div>
 
 
-                <p>
-                    Blessed memories
-                </p>
+    <!-- Bangalore -->
 
+    <div class="location-card"
+         onclick="showLocation('bangalore')">
 
-            </a>
+        <div class="location-icon">
+            🌆
+        </div>
 
+        <h3>Bangalore</h3>
 
+        <p>
+            City adventures
+        </p>
 
-            <a href="siv.html"
-                class="location-card">
+    </div>
 
+</div>
 
-                <div class="location-icon">
-                    🕉️
-                </div>
 
+<!-- ================= LOCATION GALLERY =================  -->
+<section
+    id="gallery"
+    class="location-section">
 
-                <h3>
-                    Shivalayam
-                </h3>
+    <div class="location-header">
 
+        <p id="locationIcon">
+            📍
+        </p>
 
-                <p>
-                    Peaceful moments
-                </p>
+        <h2 id="locationTitle">
 
+            Select a Above Location
 
-            </a>
+        </h2>
 
 
+        <p id="locationQuote">
 
-            <a href="both.html"
-                class="location-card special-card">
+            Choose a place and explore
+            our beautiful memories ❤️
 
+        </p>
 
-                <div class="location-icon">
-                    ❤️
-                </div>
 
+    </div>
 
-                <h3>
-                    Our Photos
-                </h3>
 
+    <div
+        id="photoGallery"
+        class="photo-gallery">
 
-                <p>
-                    The best of us together
-                </p>
 
+        <div class="empty-message">
 
-            </a>
-
-
-
-            <a href="bgl.html"
-                class="location-card">
-
-
-                <div class="location-icon">
-                    🌆
-                </div>
-
-
-                <h3>
-                    Bangalore
-                </h3>
-
-
-                <p>
-                    City adventures
-                </p>
-
-
-            </a>
-
+            📸 Select a location above
+            to see our memories ❤️
 
         </div>
 
 
-    </section>
+    </div>
 
+</section>
 
 
     <!-- ================= FOOTER ================= -->
@@ -679,7 +653,7 @@
 
         <p class="copyright">
 
-             For Your memories ❤️ Please Contact 8790767573
+             For Your memories ❤️ Please Contact siddarthanke@gmail.com
 
         </p>
 

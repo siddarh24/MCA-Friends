@@ -1,152 +1,167 @@
 /* =====================================
-   IMAGE MODAL
+   LOCATION PHOTOS DATA
 ===================================== */
 
-function openImage(imageSource) {
-
-    const modal =
-        document.getElementById("imageModal");
-
-    const modalImage =
-        document.getElementById("modalImage");
+const locations = {
 
 
-    if (!modal || !modalImage) {
+    college: {
 
-        return;
+        icon: "🎓",
+
+        title: "College Memories",
+
+        quote:
+            "Where our friendship started and beautiful memories were created ❤️",
+
+        photos: [
+
+            "image/clg.jpeg",
+            
+            "image/clg2.jpeg",
+           "image/clg3.jpeg",
+           "image/clg4.jpeg",
+           "image/clg7.jpeg",
+           "image/clg8.jpeg",
+
+        ]
+
+    },
+
+
+    kanchi: {
+
+        icon: "🛕",
+
+        title: "Kanchipuram Memories",
+
+        quote:
+            "Beautiful places become more beautiful with crazy friends ❤️",
+
+        photos: [
+
+            "image/kanchi.jpeg",
+            "image/kanchi2.jpeg",
+            
+            "image/kanchi4.jpeg"
+
+        ]
+
+    },
+
+
+    river: {
+
+        icon: "🌊",
+
+        title: "River Trip Memories",
+
+        quote:
+            "Adventure, water, laughter and unforgettable moments 🌊❤️",
+
+        photos: [
+
+            "image/trip.jpeg",
+            "image/trip2.jpeg",
+            
+            "image/trip4.jpeg"
+
+        ]
+
+    },
+
+
+    tirumala: {
+
+        icon: "🙏",
+
+        title: "Tirumala Memories",
+
+        quote:
+            "Blessed moments and beautiful memories together 🙏❤️",
+
+        photos: [
+            "image/tpty.jpeg",
+            "image/tpty1.jpeg",
+            "image/tpty2.jpeg",
+            "image/tpty6.jpeg"
+            
+
+        ]
+
+    },
+
+
+    shivalayam: {
+
+        icon: "🛕",
+
+        title: "Shivalayam Memories",
+
+        quote:
+            "Peaceful moments shared with beautiful friends ❤️",
+
+        photos: [
+
+            "image/siv.jpeg",
+            "image/siv1.jpeg",
+            "image/siv2.jpeg",
+            "image/siv5.jpeg"
+
+        ]
+
+    },
+
+
+    ours: {
+
+        icon: "❤️",
+
+        title: "Our Beautiful Photos",
+
+        quote:
+            "The best memories are the ones we create together ❤️♾️",
+
+        photos: [
+
+            "image/both.jpeg",
+            "image/both2.jpeg",
+            
+            "image/both4.jpeg"
+
+        ]
+
+    },
+
+
+    bangalore: {
+
+        icon: "🌆",
+
+        title: "Bangalore Memories",
+
+        quote:
+            "Another city, another adventure, same crazy friends 😎❤️",
+
+        photos: [
+
+           
+            "image/bgl2.jpeg"
+            
+
+        ]
 
     }
 
-
-    modal.style.display =
-        "flex";
-
-
-    modalImage.src =
-        imageSource;
-
-}
-
-
-
-/* =====================================
-   CLOSE IMAGE
-===================================== */
-
-function closeImage() {
-
-    const modal =
-        document.getElementById("imageModal");
-
-
-    if (!modal) {
-
-        return;
-
-    }
-
-
-    modal.style.display =
-        "none";
-
-}
-
-
-
-/* =====================================
-   CLOSE MODAL OUTSIDE CLICK
-===================================== */
-
-window.addEventListener(
-    "click",
-
-    function(event) {
-
-        const modal =
-            document.getElementById(
-                "imageModal"
-            );
-
-
-        if (
-            modal &&
-            event.target === modal
-        ) {
-
-            closeImage();
-
-        }
-
-    }
-);
-
-
-
-/* =====================================
-   CLOSE MODAL WITH ESC KEY
-===================================== */
-
-document.addEventListener(
-    "keydown",
-
-    function(event) {
-
-        if (
-            event.key === "Escape"
-        ) {
-
-            closeImage();
-
-        }
-
-    }
-);
-
-
-
-/* =====================================
-   EXPLORE MEMORIES BUTTON
-===================================== */
-
-function scrollToGallery() {
-
-    const gallery =
-        document.getElementById(
-            "featured"
-        );
-
-
-    if (gallery) {
-
-        gallery.scrollIntoView({
-
-            behavior: "smooth"
-
-        });
-
-    }
-
-}
-
+};
 
 
 /* =====================================
    SHOW LOCATION
-   OLD SYSTEM SUPPORT
 ===================================== */
 
 function showLocation(location) {
 
-    /*
-        Ee function old pages kosam.
-
-        Kotha homepage lo direct links
-        use chestunnam.
-
-        Future lo dynamic gallery
-        add cheyyali ante ee function
-        use cheyochu.
-    */
 
     const selectedLocation =
         locations[location];
@@ -159,17 +174,31 @@ function showLocation(location) {
     }
 
 
-    const title =
-        document.getElementById(
-            "locationTitle"
-        );
+    /* Change Icon */
+
+    document
+        .getElementById("locationIcon")
+        .innerText =
+        selectedLocation.icon;
 
 
-    const quote =
-        document.getElementById(
-            "locationQuote"
-        );
+    /* Change Title */
 
+    document
+        .getElementById("locationTitle")
+        .innerText =
+        selectedLocation.title;
+
+
+    /* Change Quote */
+
+    document
+        .getElementById("locationQuote")
+        .innerText =
+        selectedLocation.quote;
+
+
+    /* Gallery */
 
     const gallery =
         document.getElementById(
@@ -177,28 +206,13 @@ function showLocation(location) {
         );
 
 
-    if (
-        !title ||
-        !quote ||
-        !gallery
-    ) {
-
-        return;
-
-    }
-
-
-    title.innerText =
-        selectedLocation.title;
-
-
-    quote.innerText =
-        selectedLocation.quote;
-
+    /* Clear Old Photos */
 
     gallery.innerHTML =
         "";
 
+
+    /* Add New Photos */
 
     selectedLocation.photos.forEach(
         function(photo) {
@@ -254,99 +268,139 @@ function showLocation(location) {
     );
 
 
-    const gallerySection =
-        document.getElementById(
-            "gallery"
-        );
+    /* Scroll To Gallery */
 
+    document
+        .getElementById("gallery")
+        .scrollIntoView({
 
-    if (gallerySection) {
-
-        gallerySection.scrollIntoView({
-
-            behavior: "smooth"
+            behavior:
+                "smooth"
 
         });
-
-    }
 
 }
 
 
 
 /* =====================================
-   LOCATION PHOTOS DATA
+   EXPLORE MEMORIES BUTTON
 ===================================== */
 
-const locations = {
+function scrollToGallery() {
 
 
-    hyderabad: {
+    document
+        .getElementById("featured")
+        .scrollIntoView({
 
-        title:
-            "🎓 College Memories",
+            behavior:
+                "smooth"
 
-        quote:
-            "Beautiful days, crazy friends and unforgettable college memories ❤️",
+        });
 
-        photos: [
-
-            "images/hyderabad/hyd1.jpg",
-
-            "images/hyderabad/hyd2.jpg",
-
-            "images/hyderabad/hyd3.jpg",
-
-            "images/hyderabad/hyd4.jpg"
-
-        ]
-
-    },
+}
 
 
-    goa: {
 
-        title:
-            "🛕 Kanchipuram Memories",
+/* =====================================
+   OPEN IMAGE
+===================================== */
 
-        quote:
-            "Beautiful places become more beautiful with crazy friends ❤️",
-
-        photos: [
-
-            "images/goa/goa1.jpg",
-
-            "images/goa/goa2.jpg",
-
-            "images/goa/goa3.jpg",
-
-            "images/goa/goa4.jpg"
-
-        ]
-
-    },
+function openImage(imageSource) {
 
 
-    bangalore: {
+    const modal =
+        document.getElementById(
+            "imageModal"
+        );
 
-        title:
-            "🌆 Bangalore Memories",
 
-        quote:
-            "Another city, another adventure, same crazy friends 😎",
+    const modalImage =
+        document.getElementById(
+            "modalImage"
+        );
 
-        photos: [
 
-            "images/bangalore/blr1.jpg",
+    modal.style.display =
+        "flex";
 
-            "images/bangalore/blr2.jpg",
 
-            "images/bangalore/blr3.jpg",
+    modalImage.src =
+        imageSource;
 
-            "images/bangalore/blr4.jpg"
+}
 
-        ]
+
+
+/* =====================================
+   CLOSE IMAGE
+===================================== */
+
+function closeImage() {
+
+
+    document
+        .getElementById(
+            "imageModal"
+        )
+        .style.display =
+        "none";
+
+}
+
+
+
+/* =====================================
+   CLOSE OUTSIDE
+===================================== */
+
+window.addEventListener(
+    "click",
+
+    function(event) {
+
+
+        const modal =
+            document.getElementById(
+                "imageModal"
+            );
+
+
+        if (
+            event.target === modal
+        ) {
+
+            closeImage();
+
+        }
+
 
     }
 
-};
+);
+
+
+
+/* =====================================
+   CLOSE WITH ESC
+===================================== */
+
+document.addEventListener(
+    "keydown",
+
+    function(event) {
+
+
+        if (
+            event.key === "Escape"
+        ) {
+
+            closeImage();
+
+        }
+
+
+    }
+
+);
