@@ -1,169 +1,652 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
     <title>Our Memories ❤️</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="style.css">
 
-    <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Google Fonts -->
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
 </head>
 
+
 <body>
+
 
     <!-- ================= NAVBAR ================= -->
 
     <nav class="navbar">
 
-        <div class="logo">
-            Our Memories ❤️
-        </div>
+        <a href="friendsHOME.html"
+            class="logo">
+
+            <span>Our</span> Memories ❤️
+
+        </a>
+
 
         <ul class="nav-links">
 
             <li>
-                <a href="friendsHOME.html">Home</a>
+                <a href="friendsHOME.html">
+                    Home
+                </a>
             </li>
+
 
             <li class="dropdown">
 
-                <a href="#" class="drop-btn">
+                <a href="#locations">
                     📍 Locations ▾
                 </a>
 
+
                 <div class="dropdown-content">
 
-                    <a href="Hyderabad.html" onclick="showLocation('hyderabad')">
-                        College
+                    <a href="Hyderabad.html">
+                        🎓 College
                     </a>
 
-                    <a href="kanchi.html" onclick="showLocation('goa')">
-                        Kanchipuram
+                    <a href="kanchi.html">
+                        🛕 Kanchipuram
                     </a>
 
-                    <a href="trip.html" onclick="showLocation('bangalore')">
-                        River Trip
+                    <a href="trip.html">
+                        🌊 River Trip
                     </a>
-                    <a href="tpty.html" onclick="showLocation('bangalore')">
-                        Tirumala
+
+                    <a href="tpty.html">
+                        🙏 Tirumala
                     </a>
-                    <a href="siv.html" onclick="showLocation('bangalore')">
-                        Shivalayam
+
+                    <a href="siv.html">
+                        🛕 Shivalayam
                     </a>
-                    <a href="both.html" onclick="showLocation('bangalore')">
-                        ours photos
+
+                    <a href="both.html">
+                        ❤️ Our Photos
                     </a>
-                    <a href="bgl.html" onclick="showLocation('bangalore')">
-                        Bangalore
+
+                    <a href="bgl.html">
+                        🌆 Bangalore
                     </a>
 
                 </div>
 
             </li>
 
+
             <li>
-                <a href="#gallery">Memories</a>
+                <a href="#featured">
+                    Memories
+                </a>
             </li>
 
         </ul>
 
+
     </nav>
 
 
-    <!-- ================= HOME SECTION ================= -->
 
-    <section id="home" class="hero">
+    <!-- ================= HERO ================= -->
+
+    <section class="hero"
+        id="home">
+
+
+        <div class="hero-overlay"></div>
+
+
+        <!-- Floating Photos -->
+
+        <div class="floating-photo photo1">
+
+            <img src="image/singleja.jpeg"
+                alt="Memory">
+
+        </div>
+
+
+        <div class="floating-photo photo2">
+
+            <img src="image/singlesi.jpeg"
+                alt="Memory">
+
+        </div>
+
+
+        <div class="floating-photo photo3">
+
+            <img src="image/singlees.jpeg"
+                alt="Memory">
+
+        </div>
+
+
+
+        <!-- Hero Content -->
 
         <div class="hero-content">
 
-            <p class="small-title">
+
+            <div class="memory-tag">
+
                 ✨ OUR BEAUTIFUL JOURNEY ✨
-            </p>
+
+            </div>
+
 
             <h1>
-                Good Times + Crazy Friends
-                <br>
-                = Beautiful Memories ❤️
+
+                Friends Today...
+
+                <span>
+                    Memories Forever ❤️
+                </span>
+
             </h1>
 
-            <p class="quote">
 
-                "Some people make your life better simply
-                by being part of it."
+            <p class="hero-description">
+
+                Life changes, people move and
+                moments pass...
+
+                <br>
+
+                But the memories we create
+                together stay forever.
 
             </p>
 
-            <button onclick="scrollToGallery()">
-                Explore Our Memories 📸
-            </button>
+
+            <div class="hero-buttons">
+
+
+                <button
+                    class="primary-btn"
+                    onclick="scrollToGallery()">
+
+                    Explore Memories 📸
+
+                </button>
+
+
+                <a href="#locations"
+                    class="secondary-btn">
+
+                    View Locations 📍
+
+                </a>
+
+
+            </div>
+
+
+
+            <div class="hero-stats">
+
+
+                <div>
+
+                    <h3>
+                        ❤️
+                    </h3>
+
+                    <p>
+                        Forever Friends
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        📸
+                    </h3>
+
+                    <p>
+                        Beautiful Memories
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        ♾️
+                    </h3>
+
+                    <p>
+                        Endless Stories
+                    </p>
+
+                </div>
+
+
+            </div>
+
 
         </div>
+
+
+        <div class="scroll-down">
+
+            <span>
+                Scroll to explore
+            </span>
+
+            ↓
+
+        </div>
+
 
     </section>
 
 
 
-    <!-- ================= FEATURED FRIENDS PHOTOS ================= -->
+    <!-- ================= FEATURED ================= -->
 
-    <section class="featured">
+    <section class="featured"
+        id="featured">
 
-        <h2>Our Favorite Moments ❤️</h2>
 
-        <p class="section-text">
-            Every picture tells a story...
-        </p>
+        <div class="section-title">
+
+
+            <p>
+                📸 BEST MOMENTS
+            </p>
+
+
+            <h2>
+
+                Our Favorite
+                <span>
+                    Memories ❤️
+                </span>
+
+            </h2>
+
+
+            <div class="title-line"></div>
+
+
+            <p class="section-text">
+
+                Every picture has a story...
+
+                <br>
+
+                And every story has a special
+                place in our hearts.
+
+            </p>
+
+
+        </div>
+
 
 
         <div class="featured-gallery">
 
-            <div class="featured-card">
+
+            <!-- Card 1 -->
+
+            <div class="memory-card"
+                onclick="openImage('image/singleja.jpeg')">
+
 
                 <img
                     src="image/singleja.jpeg"
-                    alt="Friends Memory"
-                    onclick="openImage(this.src)"
-                >
+                    alt="Friends Memory">
+
+
+                <div class="card-overlay">
+
+
+                    <span>
+                        ❤️
+                    </span>
+
+
+                    <h3>
+                        Beautiful Days
+                    </h3>
+
+
+                </div>
+
 
             </div>
 
 
-            <div class="featured-card center-photo">
+
+            <!-- Card 2 -->
+
+            <div class="memory-card center-card"
+                onclick="openImage('image/singlesi.jpeg')">
+
 
                 <img
                     src="image/singlesi.jpeg"
-                    alt="Friends Memory"
-                    onclick="openImage(this.src)"
-                >
+                    alt="Friends Memory">
+
+
+                <div class="card-overlay">
+
+
+                    <span>
+                        📸
+                    </span>
+
+
+                    <h3>
+                        Crazy Moments
+                    </h3>
+
+
+                </div>
+
 
             </div>
 
 
-            <div class="featured-card">
+
+            <!-- Card 3 -->
+
+            <div class="memory-card"
+                onclick="openImage('image/singlees.jpeg')">
+
 
                 <img
                     src="image/singlees.jpeg"
-                    alt="Friends Memory"
-                    onclick="openImage(this.src)"
-                >
+                    alt="Friends Memory">
+
+
+                <div class="card-overlay">
+
+
+                    <span>
+                        ♾️
+                    </span>
+
+
+                    <h3>
+                        Forever Together
+                    </h3>
+
+
+                </div>
+
 
             </div>
 
+
         </div>
+
 
     </section>
 
 
 
-    <!-- ================= LOCATION GALLERY ================= -->
+    <!-- ================= QUOTE ================= -->
 
-   
+    <section class="quote-section">
+
+
+        <div class="big-quote">
+
+            ❝
+
+        </div>
+
+
+        <h2>
+
+            Some people make your life better
+
+            simply by being part of it.
+
+        </h2>
+
+
+        <p>
+
+            — Our Friendship Story ❤️
+
+        </p>
+
+
+    </section>
+
+
+
+    <!-- ================= LOCATIONS ================= -->
+
+    <section class="locations"
+        id="locations">
+
+
+        <div class="section-title">
+
+
+            <p>
+                📍 PLACES WE EXPLORED
+            </p>
+
+
+            <h2>
+
+                Our Journey
+                <span>
+                    Together
+                </span>
+
+            </h2>
+
+
+            <p class="section-text">
+
+                Different places...
+
+                Same crazy friends ❤️
+
+            </p>
+
+
+        </div>
+
+
+
+        <div class="location-grid">
+
+
+
+            <a href="Hyderabad.html"
+                class="location-card">
+
+
+                <div class="location-icon">
+                    🎓
+                </div>
+
+
+                <h3>
+                    College
+                </h3>
+
+
+                <p>
+                    Where everything started ❤️
+                </p>
+
+
+            </a>
+
+
+
+            <a href="kanchi.html"
+                class="location-card">
+
+
+                <div class="location-icon">
+                    🛕
+                </div>
+
+
+                <h3>
+                    Kanchipuram
+                </h3>
+
+
+                <p>
+                    Beautiful spiritual memories
+                </p>
+
+
+            </a>
+
+
+
+            <a href="trip.html"
+                class="location-card">
+
+
+                <div class="location-icon">
+                    🌊
+                </div>
+
+
+                <h3>
+                    River Trip
+                </h3>
+
+
+                <p>
+                    Adventure and fun together
+                </p>
+
+
+            </a>
+
+
+
+            <a href="tpty.html"
+                class="location-card">
+
+
+                <div class="location-icon">
+                    🙏
+                </div>
+
+
+                <h3>
+                    Tirumala
+                </h3>
+
+
+                <p>
+                    Blessed memories
+                </p>
+
+
+            </a>
+
+
+
+            <a href="siv.html"
+                class="location-card">
+
+
+                <div class="location-icon">
+                    🕉️
+                </div>
+
+
+                <h3>
+                    Shivalayam
+                </h3>
+
+
+                <p>
+                    Peaceful moments
+                </p>
+
+
+            </a>
+
+
+
+            <a href="both.html"
+                class="location-card special-card">
+
+
+                <div class="location-icon">
+                    ❤️
+                </div>
+
+
+                <h3>
+                    Our Photos
+                </h3>
+
+
+                <p>
+                    The best of us together
+                </p>
+
+
+            </a>
+
+
+
+            <a href="bgl.html"
+                class="location-card">
+
+
+                <div class="location-icon">
+                    🌆
+                </div>
+
+
+                <h3>
+                    Bangalore
+                </h3>
+
+
+                <p>
+                    City adventures
+                </p>
+
+
+            </a>
+
+
+        </div>
+
+
+    </section>
 
 
 
@@ -171,18 +654,35 @@
 
     <footer>
 
+
         <h2>
+
             Forever Friends ♾️
+
         </h2>
 
+
+        <div class="footer-line"></div>
+
+
         <p>
-            No matter where life takes us,
-            these memories will always stay ❤️
+
+            No matter where life takes us...
+
+            <br>
+
+            These memories will always
+            stay in our hearts ❤️
+
         </p>
 
+
         <p class="copyright">
-            Made with ❤️ for our friendship
+
+             For Your memories ❤️ Please Contact 8790767573
+
         </p>
+
 
     </footer>
 
@@ -190,23 +690,31 @@
 
     <!-- ================= IMAGE MODAL ================= -->
 
-    <div id="imageModal" class="modal">
+    <div id="imageModal"
+        class="modal">
 
-        <span class="close" onclick="closeImage()">
+
+        <span class="close"
+            onclick="closeImage()">
+
             &times;
+
         </span>
+
 
         <img
             id="modalImage"
             class="modal-content"
-            alt="Full Screen Image"
-        >
+            alt="Full Screen Image">
+
 
     </div>
 
 
+
     <script src="script.js"></script>
 
+
 </body>
+
 </html>
-```
