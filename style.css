@@ -332,7 +332,68 @@ img {
 
 }
 
+/* ================================
+   MUSIC BUTTON
+================================ */
 
+#musicButton {
+
+    position: fixed;
+
+    bottom: 25px;
+
+    right: 25px;
+
+    width: 55px;
+
+    height: 55px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #ff4f81;
+
+    color: white;
+
+    font-size: 24px;
+
+    cursor: pointer;
+
+    z-index: 1500;
+
+    box-shadow: 0 5px 20px rgba(255, 79, 129, 0.5);
+
+    transition: 0.3s;
+
+}
+
+#musicButton:hover {
+
+    transform: scale(1.1);
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    #musicButton {
+
+        width: 50px;
+
+        height: 50px;
+
+        bottom: 20px;
+
+        right: 20px;
+
+        font-size: 20px;
+
+    }
+
+}
 .hero h1 {
 
     font-family:
@@ -828,7 +889,32 @@ img {
 
 }
 
+/* =====================================
+   SCROLL TOP BUTTON - FORCE DISPLAY
+===================================== */
 
+#scrollTop {
+    position: fixed !important;
+    bottom: 25px !important;
+    right: 90px !important;
+
+    width: 55px !important;
+    height: 55px !important;
+
+    display: block !important;
+
+    border: none !important;
+    border-radius: 50% !important;
+
+    background: red !important;
+    color: white !important;
+
+    font-size: 30px !important;
+
+    cursor: pointer !important;
+
+    z-index: 99999 !important;
+}
 
 /* =========================================
    LOCATIONS
@@ -1925,6 +2011,104 @@ footer span {
     .location-card img {
 
         height: 100px;
+
+    }
+
+}
+/* =====================================
+   MUSIC BUTTON
+===================================== */
+
+#musicButton {
+
+    position: fixed;
+
+    right: 20px;
+    bottom: 20px;
+
+    width: 55px;
+    height: 55px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #ff4f81;
+
+    color: white;
+
+    font-size: 24px;
+
+    cursor: pointer;
+
+    z-index: 9999;
+
+    box-shadow:
+        0 5px 20px
+        rgba(255, 79, 129, 0.5);
+
+}
+
+
+/* =====================================
+   SCROLL TOP BUTTON
+===================================== */
+
+#scrollTop {
+
+    position: fixed;
+
+    right: 20px;
+
+    bottom: 90px;
+
+    width: 55px;
+
+    height: 55px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: white;
+
+    color: #ff4f81;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+    z-index: 9999;
+
+    display: none;
+
+}
+
+
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    #musicButton {
+
+        width: 50px;
+        height: 50px;
+
+        right: 15px;
+        bottom: 15px;
+
+    }
+
+
+    #scrollTop {
+
+        width: 50px;
+        height: 50px;
+
+        right: 15px;
+        bottom: 75px;
 
     }
 

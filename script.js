@@ -734,3 +734,110 @@ window.addEventListener(
     }
 
 );
+/* =====================================
+   BACKGROUND MUSIC
+===================================== */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const backgroundMusic =
+        document.getElementById("backgroundMusic");
+
+    const musicButton =
+        document.getElementById("musicButton");
+
+
+    /* SITE OPEN → PLAY MUSIC */
+
+    backgroundMusic.volume = 0.5;
+
+    backgroundMusic.play()
+        .then(function () {
+
+            musicButton.innerHTML = "🔊";
+
+        })
+        .catch(function () {
+
+            console.log(
+                "Browser blocked autoplay"
+            );
+
+            musicButton.innerHTML = "🎵";
+
+        });
+
+
+    /* BUTTON CLICK → ON / OFF */
+
+    musicButton.addEventListener(
+        "click",
+        function () {
+
+            if (backgroundMusic.paused) {
+
+                backgroundMusic.play();
+
+                musicButton.innerHTML = "🔊";
+
+            } else {
+
+                backgroundMusic.pause();
+
+                musicButton.innerHTML = "🎵";
+            }
+
+        }
+    );
+
+});
+
+
+/* =====================================
+   SCROLL TO TOP
+===================================== */
+
+const scrollTopButton =
+    document.getElementById("scrollTop");
+
+
+if (scrollTopButton) {
+
+    window.addEventListener(
+        "scroll",
+        function () {
+
+            if (window.scrollY > 200) {
+
+                scrollTopButton.classList.add(
+                    "show"
+                );
+
+            } else {
+
+                scrollTopButton.classList.remove(
+                    "show"
+                );
+
+            }
+
+        }
+    );
+
+
+    scrollTopButton.addEventListener(
+        "click",
+        function () {
+
+            window.scrollTo({
+
+                top: 0,
+
+                behavior: "smooth"
+
+            });
+
+        }
+    );
+
+}
