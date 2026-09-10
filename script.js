@@ -1,114 +1,206 @@
 
+
+
 /* =====================================
    LOCATION PHOTOS DATA
 ===================================== */
 
 const locations = {
 
+
     college: {
+
         icon: "🎓",
+
         title: "College Memories",
-        quote: "Where our friendship started and beautiful memories were created ❤️",
+
+        quote:
+            "Where our friendship started and beautiful memories were created ❤️",
+
 
         photos: [
+
             "image/clg.jpeg",
             "image/clg2.jpeg",
             "image/clg3.jpeg",
             "image/clg4.jpeg",
             "image/clg7.jpeg",
             "image/clg8.jpeg"
+
         ]
+
     },
 
 
     kanchi: {
+
         icon: "🛕",
-        title: "Kanchipuram Memories",
-        quote: "Beautiful places become more beautiful with crazy friends ❤️",
+
+        title:
+            "Kanchipuram Memories",
+
+        quote:
+            "Beautiful places become more beautiful with crazy friends ❤️",
+
 
         photos: [
+
             "image/kanchi.jpeg",
             "image/kanchi2.jpeg",
             "image/kanchi4.jpeg"
+
         ]
+
     },
 
 
     river: {
+
         icon: "🌊",
-        title: "River Trip Memories",
-        quote: "Adventure, water, laughter and unforgettable moments 🌊❤️",
+
+        title:
+            "River Trip Memories",
+
+        quote:
+            "Adventure, water, laughter and unforgettable moments 🌊❤️",
+
 
         photos: [
+
             "image/trip.jpeg",
             "image/trip2.jpeg",
             "image/trip4.jpeg"
+
         ]
+
     },
 
 
     tirumala: {
+
         icon: "🙏",
-        title: "Tirumala Memories",
-        quote: "Blessed moments and beautiful memories together 🙏❤️",
+
+        title:
+            "Tirumala Memories",
+
+        quote:
+            "Blessed moments and beautiful memories together 🙏❤️",
+
 
         photos: [
+
             "image/tpty.jpeg",
             "image/tpty1.jpeg",
             "image/tpty2.jpeg",
             "image/tpty6.jpeg"
+
         ]
+
     },
 
 
     shivalayam: {
+
         icon: "🕉️",
-        title: "Shivalayam Memories",
-        quote: "Peaceful moments shared with beautiful friends ❤️",
+
+        title:
+            "Shivalayam Memories",
+
+        quote:
+            "Peaceful moments shared with beautiful friends ❤️",
+
 
         photos: [
+
             "image/siv.jpeg",
             "image/siv1.jpeg",
             "image/siv2.jpeg",
             "image/siv5.jpeg"
+
         ]
+
     },
 
 
     ours: {
+
         icon: "❤️",
-        title: "Our Beautiful Photos",
-        quote: "The best memories are the ones we create together ❤️♾️",
+
+        title:
+            "Our Beautiful Photos",
+
+        quote:
+            "The best memories are the ones we create together ❤️♾️",
+
 
         photos: [
+
             "image/both.jpeg",
             "image/both2.jpeg",
             "image/both4.jpeg"
+
         ]
+
     },
 
 
     bangalore: {
+
         icon: "🌆",
-        title: "Bangalore Memories",
-        quote: "Another city, another adventure, same crazy friends 😎❤️",
+
+        title:
+            "Bangalore Memories",
+
+        quote:
+            "Another city, another adventure, same crazy friends 😎❤️",
+
 
         photos: [
+
             "image/bgl2.jpeg"
+
         ]
+
     }
+
 
 };
 
 
+
 /* =====================================
-   GET HTML ELEMENTS SAFELY
+   GET ELEMENTS
 ===================================== */
 
-const menuToggle = document.getElementById("menuToggle");
-const navLinks = document.getElementById("navLinks");
-const dropdown = document.querySelector(".dropdown");
-const locationMenu = document.querySelector(".location-menu");
+const menuToggle =
+    document.getElementById(
+        "menuToggle"
+    );
+
+
+const navLinks =
+    document.getElementById(
+        "navLinks"
+    );
+
+
+const dropdown =
+    document.querySelector(
+        ".dropdown"
+    );
+
+
+const locationMenu =
+    document.querySelector(
+        ".location-menu"
+    );
+
+
+const scrollTop =
+    document.getElementById(
+        "scrollTop"
+    );
+
 
 
 /* =====================================
@@ -117,115 +209,125 @@ const locationMenu = document.querySelector(".location-menu");
 
 function toggleMenu() {
 
-    if (navLinks) {
-        navLinks.classList.toggle("active");
-    }
+    navLinks.classList.toggle(
+        "active"
+    );
 
 }
 
 
 function closeMenu() {
 
-    if (navLinks) {
-        navLinks.classList.remove("active");
-    }
+    navLinks.classList.remove(
+        "active"
+    );
 
 }
 
-
-/* HAMBURGER CLICK */
 
 if (menuToggle) {
 
-    menuToggle.addEventListener("click", function (event) {
+    menuToggle.addEventListener(
+        "click",
 
-        event.stopPropagation();
-
-        toggleMenu();
-
-    });
-
-}
-
-
-/* =====================================
-   MOBILE LOCATIONS DROPDOWN
-===================================== */
-
-if (locationMenu && dropdown) {
-
-    locationMenu.addEventListener("click", function (event) {
-
-        if (window.innerWidth <= 768) {
-
-            event.preventDefault();
+        function (event) {
 
             event.stopPropagation();
 
-            dropdown.classList.toggle("active");
+            toggleMenu();
 
         }
 
-    });
+    );
 
 }
 
 
+
 /* =====================================
-   SHOW LOCATION PHOTOS
+   MOBILE LOCATION DROPDOWN
+===================================== */
+
+if (locationMenu) {
+
+    locationMenu.addEventListener(
+        "click",
+
+        function (event) {
+
+            if (
+                window.innerWidth <= 768
+            ) {
+
+                event.preventDefault();
+
+                dropdown.classList.toggle(
+                    "active"
+                );
+
+            }
+
+        }
+
+    );
+
+}
+
+
+
+/* =====================================
+   SHOW LOCATION
 ===================================== */
 
 function showLocation(location) {
 
-    const selectedLocation = locations[location];
+
+    const selectedLocation =
+        locations[location];
+
 
     if (!selectedLocation) {
 
-        console.log("Location not found:", location);
-
         return;
 
     }
 
 
-    /* GET ELEMENTS */
+    /* ELEMENTS */
 
     const locationIcon =
-        document.getElementById("locationIcon");
+        document.getElementById(
+            "locationIcon"
+        );
+
 
     const locationTitle =
-        document.getElementById("locationTitle");
+        document.getElementById(
+            "locationTitle"
+        );
+
 
     const locationQuote =
-        document.getElementById("locationQuote");
+        document.getElementById(
+            "locationQuote"
+        );
+
 
     const gallery =
-        document.getElementById("photoGallery");
+        document.getElementById(
+            "photoGallery"
+        );
 
 
-    /* SAFETY CHECK */
-
-    if (
-        !locationIcon ||
-        !locationTitle ||
-        !locationQuote ||
-        !gallery
-    ) {
-
-        console.log("Gallery HTML elements not found");
-
-        return;
-
-    }
-
-
-    /* CHANGE LOCATION DETAILS */
+    /* CHANGE DETAILS */
 
     locationIcon.innerText =
         selectedLocation.icon;
 
+
     locationTitle.innerText =
         selectedLocation.title;
+
 
     locationQuote.innerText =
         selectedLocation.quote;
@@ -236,95 +338,137 @@ function showLocation(location) {
     gallery.innerHTML = "";
 
 
-    /* ADD NEW PHOTOS */
+    /* ADD PHOTOS */
 
-    selectedLocation.photos.forEach(function (photo) {
-
-        const photoDiv =
-            document.createElement("div");
-
-        photoDiv.className =
-            "gallery-photo";
+    selectedLocation.photos.forEach(
+        function (photo) {
 
 
-        const image =
-            document.createElement("img");
-
-        image.src = photo;
-
-        image.alt =
-            selectedLocation.title;
-
-        image.loading =
-            "lazy";
+            const photoDiv =
+                document.createElement(
+                    "div"
+                );
 
 
-        image.addEventListener(
-            "click",
-            function () {
-
-                openImage(photo);
-
-            }
-        );
+            photoDiv.className =
+                "gallery-photo";
 
 
-        photoDiv.appendChild(image);
+            const image =
+                document.createElement(
+                    "img"
+                );
 
-        gallery.appendChild(photoDiv);
 
-    });
+            image.src =
+                photo;
+
+
+            image.alt =
+                selectedLocation.title;
+
+
+            image.loading =
+                "lazy";
+
+
+            image.addEventListener(
+                "click",
+
+                function () {
+
+                    openImage(photo);
+
+                }
+
+            );
+
+
+            photoDiv.appendChild(
+                image
+            );
+
+
+            gallery.appendChild(
+                photoDiv
+            );
+
+
+        }
+    );
 
 
     /* CLOSE MOBILE MENU */
 
     closeMenu();
 
+
     if (dropdown) {
-        dropdown.classList.remove("active");
+
+        dropdown.classList.remove(
+            "active"
+        );
+
     }
 
 
-    /* SCROLL TO GALLERY */
+    /* SCROLL */
 
-    setTimeout(function () {
+    setTimeout(
 
-        const gallerySection =
-            document.getElementById("gallery");
+        function () {
 
-        if (gallerySection) {
 
-            gallerySection.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
-            });
+            document
+                .getElementById(
+                    "gallery"
+                )
+                .scrollIntoView({
 
-        }
+                    behavior:
+                        "smooth",
 
-    }, 100);
+                    block:
+                        "start"
+
+                });
+
+
+        },
+
+        100
+
+    );
+
 
 }
 
 
+
 /* =====================================
-   EXPLORE MEMORIES BUTTON
+   EXPLORE MEMORIES
 ===================================== */
 
 function scrollToGallery() {
 
-    const featured =
-        document.getElementById("featured");
 
-    if (featured) {
+    document
+        .getElementById(
+            "locations"
+        )
+        .scrollIntoView({
 
-        featured.scrollIntoView({
-            behavior: "smooth",
-            block: "start"
+            behavior:
+                "smooth",
+
+            block:
+                "start"
+
         });
 
-    }
 
 }
+
 
 
 /* =====================================
@@ -333,25 +477,33 @@ function scrollToGallery() {
 
 function openImage(imageSource) {
 
+
     const modal =
-        document.getElementById("imageModal");
+        document.getElementById(
+            "imageModal"
+        );
+
 
     const modalImage =
-        document.getElementById("modalImage");
+        document.getElementById(
+            "modalImage"
+        );
 
 
-    if (!modal || !modalImage) {
-        return;
-    }
+    modal.style.display =
+        "flex";
 
 
-    modal.style.display = "flex";
+    modalImage.src =
+        imageSource;
 
-    modalImage.src = imageSource;
 
-    document.body.style.overflow = "hidden";
+    document.body.style.overflow =
+        "hidden";
+
 
 }
+
 
 
 /* =====================================
@@ -360,102 +512,225 @@ function openImage(imageSource) {
 
 function closeImage() {
 
+
     const modal =
-        document.getElementById("imageModal");
+        document.getElementById(
+            "imageModal"
+        );
 
 
-    if (modal) {
-
-        modal.style.display = "none";
-
-    }
+    modal.style.display =
+        "none";
 
 
-    document.body.style.overflow = "auto";
+    document.body.style.overflow =
+        "auto";
+
 
 }
 
 
-/* =====================================
-   CLOSE MODAL OUTSIDE CLICK
-===================================== */
-
-window.addEventListener("click", function (event) {
-
-    const modal =
-        document.getElementById("imageModal");
-
-
-    if (
-        modal &&
-        event.target === modal
-    ) {
-
-        closeImage();
-
-    }
-
-});
-
 
 /* =====================================
-   CLOSE WITH ESC
+   CLOSE OUTSIDE MODAL
 ===================================== */
 
-document.addEventListener("keydown", function (event) {
+window.addEventListener(
 
-    if (event.key === "Escape") {
+    "click",
 
-        closeImage();
-
-    }
-
-});
+    function (event) {
 
 
-/* =====================================
-   CLOSE MENU OUTSIDE CLICK
-===================================== */
-
-document.addEventListener("click", function (event) {
-
-    const navbar =
-        document.querySelector(".navbar");
+        const modal =
+            document.getElementById(
+                "imageModal"
+            );
 
 
-    if (
-        window.innerWidth <= 768 &&
-        navbar &&
-        !navbar.contains(event.target)
-    ) {
+        if (
+            event.target === modal
+        ) {
 
-        closeMenu();
+            closeImage();
 
-        if (dropdown) {
-            dropdown.classList.remove("active");
         }
 
+
     }
 
-});
+);
+
 
 
 /* =====================================
-   RESET DESKTOP MENU
+   CLOSE ESC
 ===================================== */
 
-window.addEventListener("resize", function () {
+document.addEventListener(
 
-    if (window.innerWidth > 768) {
+    "keydown",
 
-        closeMenu();
+    function (event) {
 
-        if (dropdown) {
-            dropdown.classList.remove("active");
+
+        if (
+            event.key === "Escape"
+        ) {
+
+            closeImage();
+
         }
+
 
     }
 
-});
+);
 
 
+
+/* =====================================
+   CLOSE MENU OUTSIDE
+===================================== */
+
+document.addEventListener(
+
+    "click",
+
+    function (event) {
+
+
+        const navbar =
+            document.querySelector(
+                ".navbar"
+            );
+
+
+        if (
+
+            window.innerWidth <= 768 &&
+
+            navbar &&
+
+            !navbar.contains(
+                event.target
+            )
+
+        ) {
+
+
+            closeMenu();
+
+
+            if (dropdown) {
+
+                dropdown.classList.remove(
+                    "active"
+                );
+
+            }
+
+
+        }
+
+
+    }
+
+);
+
+
+
+/* =====================================
+   SCROLL TOP BUTTON
+===================================== */
+
+window.addEventListener(
+
+    "scroll",
+
+    function () {
+
+
+        if (
+            window.scrollY > 400
+        ) {
+
+            scrollTop.style.display =
+                "block";
+
+        }
+
+        else {
+
+            scrollTop.style.display =
+                "none";
+
+        }
+
+
+    }
+
+);
+
+
+if (scrollTop) {
+
+    scrollTop.addEventListener(
+
+        "click",
+
+        function () {
+
+
+            window.scrollTo({
+
+                top: 0,
+
+                behavior:
+                    "smooth"
+
+            });
+
+
+        }
+
+    );
+
+}
+
+
+
+/* =====================================
+   RESET ON DESKTOP
+===================================== */
+
+window.addEventListener(
+
+    "resize",
+
+    function () {
+
+
+        if (
+            window.innerWidth > 768
+        ) {
+
+
+            closeMenu();
+
+
+            if (dropdown) {
+
+                dropdown.classList.remove(
+                    "active"
+                );
+
+            }
+
+
+        }
+
+
+    }
+
+);
